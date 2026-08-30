@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <rect width="1920" height="1080" fill="#14213d"/>
+  <polygon points="960,120 1120,520 800,520" fill="#f2c14e"/>
+  <rect x="720" y="520" width="480" height="280" fill="#eef3f6"/>
+  <rect x="200" y="760" width="1520" height="200" fill="#1b3a4b"/>
+</svg>

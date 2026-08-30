@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 700" preserveAspectRatio="xMidYMid slice">
+  <rect width="1920" height="700" fill="#3d7ea6"/>
+  <circle cx="420" cy="420" r="160" fill="#7bd17f"/>
+  <circle cx="700" cy="460" r="140" fill="#f2c14e"/>
+  <circle cx="980" cy="430" r="150" fill="#e07a5f"/>
+  <rect y="540" width="1920" height="160" fill="#1b3a4b"/>
+</svg>

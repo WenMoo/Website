@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="winter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9ec5e8"/>
+      <stop offset="100%" stop-color="#eef5fb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#winter)"/>
+  <polygon points="180,760 420,280 660,760" fill="#d5e4f3"/>
+  <polygon points="520,800 820,220 1120,800" fill="#c5d9ee"/>
+  <polygon points="1080,780 1420,300 1760,780" fill="#dbe7f5"/>
+  <ellipse cx="960" cy="980" rx="1100" ry="220" fill="#f7fbff"/>
+  <rect x="860" y="720" width="220" height="160" fill="#cfd8e3"/>
+  <rect x="900" y="760" width="40" height="50" fill="#5b6b82"/>
+  <rect x="1000" y="760" width="40" height="50" fill="#5b6b82"/>
+</svg>
