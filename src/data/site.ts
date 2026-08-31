@@ -30,6 +30,44 @@ export const hero = {
   slogan: 'Make Casual Games Part Of Your Life',
 }
 
+export const homeSections = [
+  {
+    to: '/about',
+    kicker: 'About',
+    title: '关于我们',
+    desc: '2020 年成立于深圳，专注微信小游戏自主研发与发行。以 Merge 为核心赛道，深圳、北京双城办公。',
+    image: '/images/life-office.svg',
+  },
+  {
+    to: '/games',
+    kicker: 'Games',
+    title: '游戏产品',
+    desc: '《改装大作战》《庄园合合》《向往的生活》等作品在线。把休闲游戏做成长期产品，让合成成为日常的一部分。',
+    image: '/images/game-truck.svg',
+  },
+  {
+    to: '/social',
+    kicker: 'Social',
+    title: '社会招聘',
+    desc: '寻找愿意把小游戏做成长期产品的人。策划、程序、美术、运营直接进入项目组，和上线产品共担口碑。',
+    image: '/images/channel-social.svg',
+  },
+  {
+    to: '/campus',
+    kicker: 'Campus',
+    title: '校园招聘',
+    desc: '从校园进入真实项目，参与从 0 到 1。入职后有导师和版本节奏，把学校里的能力接到可上线的产品上。',
+    image: '/images/channel-campus.svg',
+  },
+  {
+    to: '/life',
+    kicker: 'Life',
+    title: '必凡乐活',
+    desc: '同事平均年龄 25 岁。篮球、骑行、二次元等俱乐部由大家自发组织，一起努力，也一起分享成长的甜蜜。',
+    image: '/images/life-team.svg',
+  },
+] as const
+
 export const recruitTypes = [
   {
     key: 'social',
