@@ -17,6 +17,10 @@ export const brand = {
 
 export const navItems = [
   { label: '首页', to: '/' },
+  { label: '关于我们', to: '/about' },
+  { label: '游戏产品', to: '/games' },
+  { label: '社会招聘', to: '/social' },
+  { label: '校园招聘', to: '/campus' },
   { label: '必凡乐活', to: '/life' },
 ] as const
 
@@ -69,6 +73,44 @@ export const aboutParagraphs = [
   '团队理念是「让自己快乐，让团队快乐，让玩家快乐」。目前在深圳、北京办公，欢迎有同样热爱的人加入 BeeFun。',
 ]
 
+export const aboutPage = {
+  heroImage: '/images/life-hero.svg',
+  storyImage: '/images/life-office.svg',
+  stats: [
+    { value: '2020', label: '成立于深圳' },
+    { value: '2', label: '办公城市' },
+    { value: '25', label: '平均年龄' },
+    { value: 'Merge', label: '核心赛道' },
+  ],
+  values: [
+    {
+      title: '让自己快乐',
+      en: 'Be Yourself',
+      desc: '把热爱放进日常工作里，认真做游戏，也认真过自己的生活。',
+    },
+    {
+      title: '让团队快乐',
+      en: 'Be Together',
+      desc: '年轻、扁平、直接协作。核心成员来自腾讯、网易，愿意带人一起把事情做完。',
+    },
+    {
+      title: '让玩家快乐',
+      en: 'Be Fun',
+      desc: '坚持自研自发，把 Merge 做成长期产品，让休闲游戏成为玩家生活的一部分。',
+    },
+  ],
+  timeline: [
+    { year: '2020.04', title: '必凡成立', desc: '注册于深圳软件基地，开始做微信小游戏。' },
+    { year: '起点', title: '口袋宠物世界', desc: '公司首款 Merge 产品，跑通合成品类的研发与运营。' },
+    { year: '生长', title: '授权与标杆', desc: '《庄园合合》《向往的生活》拿下正版授权，《改装大作战》进入畅销前列。' },
+    { year: '现在', title: '双城出发', desc: '深圳总部与北京研发协同，继续把休闲游戏做成长期产品。' },
+  ],
+  officeCards: [
+    { city: '深圳', tag: '总部 · 研发', hint: '深圳市前海深港合作区南山街道梦海大道5289号中粮亚太大厦1405' },
+    { city: '北京', tag: '研发 · 职能', hint: '与深圳总部协同的研发与职能团队' },
+  ],
+}
+
 export const offices = [
   { id: 'sz', city: '深圳', country: 'CHN', x: 72.4, y: 51.2 },
   { id: 'bj', city: '北京', country: 'CHN', x: 72.2, y: 38.5 },
@@ -83,6 +125,9 @@ export const products = [
     cover: '/images/game-rpg.svg',
     summary: '主打三分钟自走棋的休闲竞技。组合不同英雄构建阵容，与其他玩家对战。',
     metric: '官网主打产品',
+    genre: '竞技',
+    platform: '微信小游戏',
+    highlights: ['三分钟一局', '自走棋阵容', '休闲对战'],
   },
   {
     id: 'mod-battle',
@@ -90,6 +135,10 @@ export const products = [
     cover: '/images/game-truck.svg',
     summary: '微信小游戏人气产品。上线后迅速进入畅销前列，是公司在 Merge 赛道的标杆之作。',
     metric: '微信小游戏标杆产品',
+    genre: 'Merge',
+    platform: '微信小游戏',
+    featured: true,
+    highlights: ['畅销前列', 'Merge 标杆', '自研自发'],
   },
   {
     id: 'manor-merge',
@@ -97,6 +146,9 @@ export const products = [
     cover: '/images/game-farm.svg',
     summary: '全球首款 Merge 产品《Merge Mansion》的国内版本，获腾讯互娱与 MetaCore 授权。',
     metric: '官方正版授权',
+    genre: 'Merge',
+    platform: '微信小游戏',
+    highlights: ['Merge Mansion 国内版', '腾讯互娱授权', 'MetaCore 授权'],
   },
   {
     id: 'back-to-life',
@@ -104,6 +156,9 @@ export const products = [
     cover: '/images/game-food.svg',
     summary: '芒果 TV 官方授权的 Merge 模拟经营。还原综艺田园氛围，在合成中慢慢过日子。',
     metric: '芒果 TV 正版授权',
+    genre: 'Merge',
+    platform: '微信小游戏',
+    highlights: ['芒果 TV 授权', '合成经营', '田园日常'],
   },
   {
     id: 'pocket-pets',
@@ -111,8 +166,17 @@ export const products = [
     cover: '/images/game-kingdom.svg',
     summary: '公司首款 Merge 产品，为后续合成品类的研发与运营打下基础。',
     metric: 'Merge 品类起点',
+    genre: 'Merge',
+    platform: '微信小游戏',
+    highlights: ['首款 Merge', '品类起点', '自研产品'],
   },
 ]
+
+export const gamesPage = {
+  heroImage: '/images/game-truck.svg',
+  intro: '专注微信小游戏的自主研发与发行，以 Merge（合成融合）为核心赛道，把休闲游戏做成长期产品。',
+  filters: ['全部', 'Merge', '竞技'] as const,
+}
 
 export const workPhotos = [
   { src: '/images/life-office.svg', alt: '明亮的开放办公区' },

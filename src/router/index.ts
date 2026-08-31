@@ -4,6 +4,8 @@ import type { ChannelKey } from '@/data/site'
 const HomeView = () => import('@/views/HomeView.vue')
 const ChannelView = () => import('@/views/ChannelView.vue')
 const LifeView = () => import('@/views/LifeView.vue')
+const AboutView = () => import('@/views/AboutView.vue')
+const GamesView = () => import('@/views/GamesView.vue')
 const PrivacyView = () => import('@/views/PrivacyView.vue')
 
 const router = createRouter({
@@ -41,6 +43,8 @@ const router = createRouter({
       props: { channelKey: 'intern' satisfies ChannelKey },
       meta: { title: '实习生计划', transparentNav: true },
     },
+    { path: '/about', name: 'about', component: AboutView, meta: { title: '关于我们' } },
+    { path: '/games', name: 'games', component: GamesView, meta: { title: '游戏产品' } },
     { path: '/life', name: 'life', component: LifeView, meta: { title: '必凡乐活' } },
     { path: '/privacy', name: 'privacy', component: PrivacyView, meta: { title: '隐私政策' } },
     { path: '/jobs', redirect: '/' },

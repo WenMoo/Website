@@ -45,19 +45,19 @@ watch(
         : 'bg-white/95 text-ink shadow-[0_1px_0_rgba(0,0,0,0.06)] backdrop-blur'
     "
   >
-    <div class="relative mx-auto flex h-16 max-w-6xl items-center justify-between px-4 lg:h-[72px] lg:px-6">
-      <RouterLink to="/" class="relative z-10 flex items-center">
+    <div class="relative flex h-16 w-full items-center justify-between px-5 lg:h-[72px] lg:px-10 xl:px-14">
+      <RouterLink to="/" class="relative z-10 shrink-0">
         <img :src="brand.logo" :alt="brand.name" class="h-10 w-auto object-contain" />
       </RouterLink>
 
       <p
-        class="pointer-events-none absolute left-1/2 top-1/2 max-w-[42%] -translate-x-1/2 -translate-y-1/2 truncate text-center text-[10px] font-medium tracking-[0.06em] transition-opacity duration-300 sm:text-[12px] md:max-w-[46%] md:text-[13px] lg:text-sm lg:tracking-[0.08em]"
+        class="pointer-events-none absolute left-1/2 top-1/2 z-[1] w-[42%] max-w-md -translate-x-1/2 -translate-y-1/2 truncate text-center text-[11px] font-medium tracking-[0.06em] transition-opacity duration-300 sm:text-[12px] lg:text-[13px] lg:tracking-[0.08em] xl:text-sm"
         :class="transparent ? 'opacity-0' : 'opacity-100'"
       >
         {{ hero.slogan }}
       </p>
 
-      <nav class="relative z-10 hidden items-center gap-7 text-[15px] md:flex">
+      <nav class="relative z-10 hidden shrink-0 items-center gap-5 text-[14px] lg:flex xl:gap-7 xl:text-[15px]">
         <RouterLink
           v-for="item in navItems"
           :key="item.to"
@@ -73,7 +73,7 @@ watch(
       </nav>
 
       <button
-        class="inline-flex h-10 w-10 items-center justify-center rounded-md md:hidden"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-md lg:hidden"
         type="button"
         :aria-expanded="menuOpen"
         aria-label="打开导航"
@@ -88,7 +88,7 @@ watch(
       </button>
     </div>
 
-    <div v-if="menuOpen" class="border-t border-black/5 bg-white text-ink md:hidden">
+    <div v-if="menuOpen" class="border-t border-black/5 bg-white text-ink lg:hidden">
       <RouterLink
         v-for="item in navItems"
         :key="item.to"
