@@ -124,7 +124,7 @@ const filteredGames = computed(() =>
         </p>
         <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
           <RouterLink
-            to="/social"
+            to="/jobs"
             class="rounded-full bg-brand px-7 py-3 text-sm text-ink transition hover:bg-brand-dark"
           >
             加入我们

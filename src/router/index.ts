@@ -1,11 +1,10 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import type { ChannelKey } from '@/data/site'
 
 const HomeView = () => import('@/views/HomeView.vue')
-const ChannelView = () => import('@/views/ChannelView.vue')
 const LifeView = () => import('@/views/LifeView.vue')
 const AboutView = () => import('@/views/AboutView.vue')
 const GamesView = () => import('@/views/GamesView.vue')
+const JobsView = () => import('@/views/JobsView.vue')
 const PrivacyView = () => import('@/views/PrivacyView.vue')
 
 const router = createRouter({
@@ -15,39 +14,15 @@ const router = createRouter({
   },
   routes: [
     { path: '/', name: 'home', component: HomeView, meta: { title: '首页', transparentNav: true } },
-    {
-      path: '/social',
-      name: 'social',
-      component: ChannelView,
-      props: { channelKey: 'social' satisfies ChannelKey },
-      meta: { title: '社会招聘', transparentNav: true },
-    },
-    {
-      path: '/elite',
-      name: 'elite',
-      component: ChannelView,
-      props: { channelKey: 'elite' satisfies ChannelKey },
-      meta: { title: 'Elite Program+', transparentNav: true },
-    },
-    {
-      path: '/campus',
-      name: 'campus',
-      component: ChannelView,
-      props: { channelKey: 'campus' satisfies ChannelKey },
-      meta: { title: '应届生校招', transparentNav: true },
-    },
-    {
-      path: '/intern',
-      name: 'intern',
-      component: ChannelView,
-      props: { channelKey: 'intern' satisfies ChannelKey },
-      meta: { title: '实习生计划', transparentNav: true },
-    },
+    { path: '/jobs', name: 'jobs', component: JobsView, meta: { title: '人才招聘' } },
+    { path: '/social', redirect: '/jobs' },
+    { path: '/campus', redirect: '/jobs' },
+    { path: '/intern', redirect: '/jobs' },
+    { path: '/elite', redirect: '/jobs' },
     { path: '/about', name: 'about', component: AboutView, meta: { title: '关于我们' } },
     { path: '/games', name: 'games', component: GamesView, meta: { title: '游戏产品' } },
     { path: '/life', name: 'life', component: LifeView, meta: { title: '必凡乐活' } },
     { path: '/privacy', name: 'privacy', component: PrivacyView, meta: { title: '隐私政策' } },
-    { path: '/jobs', redirect: '/' },
   ],
 })
 

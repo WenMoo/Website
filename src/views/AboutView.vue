@@ -136,20 +136,14 @@ import RevealOnScroll from '@/components/common/RevealOnScroll.vue'
         <p class="text-sm tracking-[0.24em] text-white/50">JOIN US</p>
         <h2 class="mt-3 text-3xl font-medium">欢迎有同样热爱的人加入 BeeFun</h2>
         <p class="mx-auto mt-4 max-w-xl text-sm leading-7 text-white/65">
-          社招、校招与实习通道即将开放，也可以先把简历发到招聘邮箱。
+          社招、校招与实习都在人才招聘页，投递跳转 BOSS 直聘。
         </p>
         <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
           <RouterLink
-            to="/social"
+            to="/jobs"
             class="rounded-full bg-brand px-7 py-3 text-sm text-ink transition hover:bg-brand-dark"
           >
-            社会招聘
-          </RouterLink>
-          <RouterLink
-            to="/campus"
-            class="rounded-full border border-white/25 px-7 py-3 text-sm text-white transition hover:border-white/60"
-          >
-            校园招聘
+            查看职位
           </RouterLink>
         </div>
         <a :href="`mailto:${brand.email}`" class="mt-6 inline-block text-sm text-white/55 hover:text-white">

@@ -19,8 +19,7 @@ export const navItems = [
   { label: '首页', to: '/' },
   { label: '关于我们', to: '/about' },
   { label: '游戏产品', to: '/games' },
-  { label: '社会招聘', to: '/social' },
-  { label: '校园招聘', to: '/campus' },
+  { label: '人才招聘', to: '/jobs' },
   { label: '必凡乐活', to: '/life' },
 ] as const
 
@@ -46,18 +45,11 @@ export const homeSections = [
     image: '/images/game-truck.svg',
   },
   {
-    to: '/social',
-    kicker: 'Social',
-    title: '社会招聘',
-    desc: '寻找愿意把小游戏做成长期产品的人。策划、程序、美术、运营直接进入项目组，和上线产品共担口碑。',
+    to: '/jobs',
+    kicker: 'Careers',
+    title: '人才招聘',
+    desc: '社招与校招统一开放。策划、程序、美术、投放都在招，投递跳转 BOSS 直聘必凡娱乐主页。',
     image: '/images/channel-social.svg',
-  },
-  {
-    to: '/campus',
-    kicker: 'Campus',
-    title: '校园招聘',
-    desc: '从校园进入真实项目，参与从 0 到 1。入职后有导师和版本节奏，把学校里的能力接到可上线的产品上。',
-    image: '/images/channel-campus.svg',
   },
   {
     to: '/life',
@@ -155,6 +147,241 @@ export const offices = [
 ]
 
 export const chinaCities = ['深圳', '北京']
+
+export const bossJobsUrl =
+  'https://www.zhipin.com/gongsi/job/120000/11a5f89b1368e82a0Hxy2tu1GA~~.html'
+
+export const jobsPage = {
+  heroImage: '/images/channel-social.svg',
+  intro:
+    '社招、校招与实习统一在 BOSS 直聘投递。以下职位根据必凡娱乐公开招聘信息整理，点击投递会打开 BOSS 直聘公司主页。',
+  filters: ['全部', '社会招聘', '校园招聘', '策划', '开发', '美术', '投放', '实习'] as const,
+}
+
+export type JobTrack = 'social' | 'campus'
+export type JobCategory = '策划' | '开发' | '美术' | '投放' | '实习'
+
+export const jobs: {
+  id: string
+  title: string
+  track: JobTrack
+  category: JobCategory
+  city: string
+  exp: string
+  edu: string
+  salary: string
+  type: string
+}[] = [
+  {
+    id: 'ua-optimizer',
+    title: '海外游戏投放优化师',
+    track: 'social',
+    category: '投放',
+    city: '深圳 · 南山',
+    exp: '经验不限',
+    edu: '本科及以上',
+    salary: '15-30K',
+    type: '全职',
+  },
+  {
+    id: 'senior-merge-designer',
+    title: '高级游戏策划（休闲 Merge 类）',
+    track: 'social',
+    category: '策划',
+    city: '深圳 · 南山',
+    exp: '经验不限',
+    edu: '学历不限',
+    salary: '15-30K',
+    type: '全职',
+  },
+  {
+    id: 'illustration-pastoral',
+    title: '原画设计（清新 / 治愈 / 田园风格）',
+    track: 'social',
+    category: '美术',
+    city: '深圳 · 南山',
+    exp: '经验不限',
+    edu: '本科及以上',
+    salary: '10-15K',
+    type: '全职',
+  },
+  {
+    id: 'ua-lead-sz',
+    title: '海外投放负责人',
+    track: 'social',
+    category: '投放',
+    city: '深圳 · 南山',
+    exp: '经验不限',
+    edu: '本科及以上',
+    salary: '25-50K',
+    type: '全职',
+  },
+  {
+    id: 'ua-lead-gz',
+    title: '海外投放负责人',
+    track: 'social',
+    category: '投放',
+    city: '广州 · 天河',
+    exp: '经验不限',
+    edu: '本科及以上',
+    salary: '25-50K',
+    type: '全职',
+  },
+  {
+    id: 'game-ui-bj',
+    title: '游戏 UI 设计师',
+    track: 'social',
+    category: '美术',
+    city: '北京 · 朝阳',
+    exp: '1-3 年',
+    edu: '学历不限',
+    salary: '12-24K',
+    type: '全职',
+  },
+  {
+    id: 'guofeng-illustration',
+    title: '国风游戏原画',
+    track: 'social',
+    category: '美术',
+    city: '北京 · 朝阳',
+    exp: '经验不限',
+    edu: '学历不限',
+    salary: '12-24K',
+    type: '全职',
+  },
+  {
+    id: 'game-server-bj',
+    title: '游戏服务器开发工程师',
+    track: 'social',
+    category: '开发',
+    city: '北京 · 朝阳',
+    exp: '1-3 年',
+    edu: '本科及以上',
+    salary: '15-30K',
+    type: '全职',
+  },
+  {
+    id: 'casual-female-designer',
+    title: '休闲游戏策划（女性向）',
+    track: 'social',
+    category: '策划',
+    city: '深圳 · 南山',
+    exp: '3-5 年',
+    edu: '本科及以上',
+    salary: '12-24K',
+    type: '全职',
+  },
+  {
+    id: 'merge-system-designer',
+    title: '游戏系统策划（休闲 Merge 类）',
+    track: 'social',
+    category: '策划',
+    city: '深圳 · 南山',
+    exp: '经验不限',
+    edu: '学历不限',
+    salary: '11-22K',
+    type: '全职',
+  },
+  {
+    id: 'campus-illustration',
+    title: '游戏原画设计（26-27 届）',
+    track: 'campus',
+    category: '美术',
+    city: '深圳 / 北京',
+    exp: '应届 / 实习',
+    edu: '本科及以上',
+    salary: '10-15K',
+    type: '校招',
+  },
+  {
+    id: 'campus-ui',
+    title: '游戏 UI 设计（26-27 届）',
+    track: 'campus',
+    category: '美术',
+    city: '深圳 / 北京',
+    exp: '应届 / 实习',
+    edu: '本科及以上',
+    salary: '10-15K',
+    type: '校招',
+  },
+  {
+    id: 'campus-anim',
+    title: '2D 动画设计（26-27 届）',
+    track: 'campus',
+    category: '美术',
+    city: '深圳 / 北京',
+    exp: '应届 / 实习',
+    edu: '本科及以上',
+    salary: '10-15K',
+    type: '校招',
+  },
+  {
+    id: 'campus-design',
+    title: '游戏策划（26-27 届）',
+    track: 'campus',
+    category: '策划',
+    city: '深圳 / 北京',
+    exp: '应届 / 实习',
+    edu: '本科及以上',
+    salary: '10-15K',
+    type: '校招',
+  },
+  {
+    id: 'campus-server',
+    title: '游戏服务端开发（26-27 届）',
+    track: 'campus',
+    category: '开发',
+    city: '深圳 / 北京',
+    exp: '应届 / 实习',
+    edu: '本科及以上',
+    salary: '10-15K',
+    type: '校招',
+  },
+  {
+    id: 'campus-client',
+    title: '游戏客户端开发（26-27 届）',
+    track: 'campus',
+    category: '开发',
+    city: '深圳 / 北京',
+    exp: '应届 / 实习',
+    edu: '本科及以上',
+    salary: '10-15K',
+    type: '校招',
+  },
+  {
+    id: 'intern-design',
+    title: '策划实习生',
+    track: 'campus',
+    category: '实习',
+    city: '深圳 / 北京',
+    exp: '2027 届在校生',
+    edu: '本科在读',
+    salary: '面议',
+    type: '实习',
+  },
+  {
+    id: 'intern-ops',
+    title: '内容运营实习生',
+    track: 'campus',
+    category: '实习',
+    city: '深圳 / 北京',
+    exp: '2027 届在校生',
+    edu: '本科在读',
+    salary: '面议',
+    type: '实习',
+  },
+  {
+    id: 'intern-art',
+    title: '美术设计类实习生',
+    track: 'campus',
+    category: '实习',
+    city: '深圳 / 北京',
+    exp: '2027 届在校生',
+    edu: '本科在读',
+    salary: '面议',
+    type: '实习',
+  },
+]
 
 export const products = [
   {
